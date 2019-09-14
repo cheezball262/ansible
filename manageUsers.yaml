@@ -1,0 +1,29 @@
+---
+- name: Host01
+  hosts: all
+  become: yes
+
+  #change install_state to present/absent to add/remove user
+  #change user_name to desired value
+  #change full_name to desired value
+  vars:
+    install_state: present
+    user_name: johnd
+    full_name: John Doe
+  
+  tasks:
+    - name: Add user with full name in comment 
+      user:
+        name: "{{ user_name }}"
+        comment: "{{ full_name }}"
+        generate_ssh_key: no
+        remove: yes
+        state: "{{ install_state }}"
+
+    - name: Set ssh key for user
+      authorized_key:
+        user: "{{ user_name }}"
+        state: "{{ install_state }}"
+
+        #assumes user public key is located in same directory as playbook
+        key: "{{ lookup('file', 'id_rsa.pub') }}"
