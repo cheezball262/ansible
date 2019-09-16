@@ -9,7 +9,7 @@ Environment: RHEL/CentOS, Python >2.7, ansible, ssh key access to target host<br
     	note: change install_state to present/absent to add remove users
             change username and full_name vars to appropriate vaules.
 
-**listUsers.yaml** - will list all users/userids/comments on the system. 
+**listUsers.yaml** - will list all users on the system. 
 	
 
     usage: ansible-playbook listUsers.yaml
@@ -17,7 +17,7 @@ Environment: RHEL/CentOS, Python >2.7, ansible, ssh key access to target host<br
     Could use some filtering to get rid of the non-essential return data.
     
     	
-**listUserScript.yaml** - will remove a user and associated directories from the system. 
+**listUserScript.yaml** - will list all users/userids/comments on the system.
 	
 
      usage: ansible-playbook listUserScript.yaml<userid>
