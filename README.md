@@ -13,8 +13,8 @@ Environment: RHEL/CentOS, Python >2.7, ansible, ssh key access to target host<br
 	
 
     usage: ansible-playbook listUsers.yaml
-    note: this uses the getent ansible module. This will dump the output of all the user.
-    Could use some filtering
+    note: this uses the getent ansible module. This will dump the complete output for all the users.
+    Could use some filtering to get rid of the non-essential return data.
     
     	
 **listUserScript.yaml** - will remove a user and associated directories from the system. 
