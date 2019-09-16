@@ -1,0 +1,13 @@
+
+---
+- name: Host01
+  hosts: all
+  become: yes
+  tasks:
+  - name: Run a script using an executable in a system path
+    script: listUsers.py 
+    register: output
+    args:
+      executable: python3
+  - debug:
+      msg: "{{ output.stdout_lines }}"

@@ -9,6 +9,6 @@
       database: passwd
       split: ':'
   - debug:
-      #var: getent_passwd
-      #figure out how to parse the result of getent
-      var: getent_passwd[0][1]
+      var: getent_passwd
+    
+  
