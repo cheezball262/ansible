@@ -1,6 +1,6 @@
 
 Environment: RHEL/CentOS, Python >2.7, ansible, ssh key access to target host<br><br>
-<b>Ansible Playbooks:<b><br>
+<b>Ansible Playbooks:</b><br>
 **manageUsers.yaml** - will add/remove users from system. 
 	
 
